@@ -223,6 +223,6 @@ def health_check():
     """Health check endpoint to verify the API is running."""
     return {"status": "healthy", "models_loaded": list(models_dict.keys())}
 
-# For running the app directly
-if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+# Not required in prod env
+# if __name__ == "__main__":
+#     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
